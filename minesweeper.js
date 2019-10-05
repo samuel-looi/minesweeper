@@ -11,9 +11,9 @@ var board = {
 		{row:1,col:1,isMine:0,hidden:true},
 		{row:1,col:2,isMine:0,hidden:true},
 
-		{row:2,col:0,isMine:0,hidden:true},
+		{row:2,col:0,isMine:1,hidden:true},
 		{row:2,col:1,isMine:0,hidden:true},
-		{row:2,col:2,isMine:0,hidden:true}
+		{row:2,col:2,isMine:1,hidden:true}
 	]
 };
 
@@ -62,3 +62,16 @@ function countSurroundingMines (cell) {
 	return numOfSurroundingMines;
 }
 
+
+
+
+document.addEventListener('click',e=>{
+	checkForWin();
+	console.log(e)
+});
+
+document.addEventListener('contextmenu',e=>{
+	e.preventDefault();
+	checkForWin();
+	console.log(e)
+});
