@@ -36,6 +36,18 @@ function startGame () {
 // 2. Are all of the mines marked?
 function checkForWin () {
 
+	const unmarkedMine = 0;
+	const numOfHiddenCells = 0;
+	board.cells.forEach(cell=>{
+		// Check if any cells contains isMine && !isMarked
+		// Check if any cells are still hidden
+		if (cell.isMine && !isMarked ) unmarkedMine++;
+		if (cell.hidden) numOfHiddenCells++;
+	});
+
+	if(unmarkedMine===0 && numOfHiddenCells===0){
+		
+	}
   // You can use this function call to declare a winner (once you've
   // detected that they've won, that is!)
   //   lib.displayMessage('You win!')
